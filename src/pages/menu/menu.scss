@@ -1,0 +1,6 @@
+@use '../../sass' as *;
+
+.menu-container {
+    @include container;
+    background-color: $secondary-color;
+}
