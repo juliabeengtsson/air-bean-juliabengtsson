@@ -1,0 +1,38 @@
+@use '../../sass' as *;
+
+.status-container {
+    @include container;
+
+    background-color: $orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 216px;
+        padding: 4rem 0;
+    }
+    h1 {
+        font-family: $font-pt;
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 43px;
+        text-align: center;
+        padding: 0 2rem 2rem 2rem;
+    }
+}
+.order-number {
+    padding-top: 3rem;
+    opacity: 70%;
+    font-family: $font-work-sans;
+    font-weight: 400;
+    line-height: 19px;
+    font-size: 1rem;
+}
+.order-minutes {
+    font-family: $font-work-sans;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    padding-bottom: 5rem;
+}

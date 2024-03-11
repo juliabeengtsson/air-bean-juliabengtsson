@@ -1,0 +1,14 @@
+@use '../../sass' as *;
+
+.button {
+    @include button;
+    font-family: $font-pt;
+    font-weight: 700;
+
+    &.filled {
+        @include filled;
+    }
+    &.outlined {
+        @include outlined;
+    }
+}
