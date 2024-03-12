@@ -12,9 +12,9 @@ const Nav = () => {
             </div>
 
             <section className="menu-items">
-                <a href="#">Meny</a>
+                <a onClick={() => navigate('/menu')}>Meny</a>
                 <hr />
-                <a href="#">Vårt kaffe</a>
+                <a onClick={() => navigate('/about')}>Vårt kaffe</a>
                 <hr />
                 <a href="#">Min profil</a>
                 <hr />

@@ -1,6 +1,51 @@
 @use '../../sass' as *;
 
 .menu-container {
-    @include container;
+    width: 375px;
+    margin: auto;
     background-color: $secondary-color;
+    color: $brown;
+
+    h1 {
+        font-family: $font-pt;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 50px;
+        text-align: center;
+    }
+}
+.add-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    color: $brown;
+    font-family: $font-pt;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+}
+.menu {
+    display: flex;
+    margin-top: 1rem;
+}
+.menu-title-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.desc {
+    font-family: $font-work-sans;
+    font-weight: 400;
+    font-size: .8rem;
+}
+.menu-price {
+    position: absolute;
+    left: 53rem;
+    font-family: $font-pt;
+    font-weight: 700;
+    font-size: 1.4rem;
 }
