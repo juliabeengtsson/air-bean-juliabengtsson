@@ -14,6 +14,32 @@
         text-align: center;
     }
 }
+
+.nav-button-menu {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 34rem;
+}
+.cart-button {
+    cursor: pointer;
+    position: absolute;
+    top: .00001rem;
+    left: 51rem;
+}
+.quantity-cart {
+    background-color: $orange;
+    border-radius: 100%;
+    width: 22px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: .7rem;
+    left: 54.5rem;
+}
 .add-button {
     cursor: pointer;
     display: flex;
@@ -44,7 +70,8 @@
 }
 .menu-price {
     position: absolute;
-    left: 53rem;
+    left: 52rem;
+    margin-top: .2rem;
     font-family: $font-pt;
     font-weight: 700;
     font-size: 1.4rem;

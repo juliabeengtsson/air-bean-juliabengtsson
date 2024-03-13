@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ title, filled, to }) => {
 
     const navigateToDestination = () => {
         to != undefined && navigate(to);
-      };
+    };
 
     return(
         <button

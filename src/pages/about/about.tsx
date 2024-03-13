@@ -2,11 +2,23 @@ import './about.scss';
 import HeaderTop from '../../assets/header-top.png';
 import HeaderBottom from '../../assets/header-bottom.png';
 import Eva from '../../assets/Eva.png';
+import NavButton from '../../assets/svg/nav.svg';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+    const navigate = useNavigate();
+
+    function handleClick() {
+        navigate('/nav')
+    }
+
     return(
         <main className="about-container">
             <img src={HeaderTop} alt="Top header flowers" />
+
+            <section className="nav-button-menu">
+                <img src={NavButton} alt="Nav button menu" onClick={handleClick}/>
+            </section>
 
             <section className="text-container">
                 <h1>Vårt kaffe</h1>
