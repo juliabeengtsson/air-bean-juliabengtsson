@@ -9,13 +9,13 @@
 
 @mixin button {
     border-radius: 50px;
-    font-size: 1.5rem;
-    width: 184px;
+    font-size: 1.3rem;
     border: none;
     font-weight: 700;
     line-height: 28px;
     cursor: pointer;
     height: 55px;
+    padding: 0 2rem;
 }
 
 @mixin filled {

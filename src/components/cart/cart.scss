@@ -1,0 +1,92 @@
+@use '../../sass' as *;
+
+.cart-overlay-container {
+    position: absolute; 
+    top: 0;
+    left: 33.28rem;
+    width: 375px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000;
+}
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px;
+    height: 80%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    border-radius: 3px;
+
+    h1 {
+        font-family: $font-pt;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $brown;
+    }
+    h2 {
+        color: $brown;
+        font-family: $font-pt;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    p {
+        color: $brown;
+        font-family: $font-work-sans;
+        font-weight: 400;
+        font-size: .8rem;
+    }
+}
+.in-your-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.cart-content {
+    display: flex;
+    justify-content: space-between;
+}
+.arrow-icon {
+    transform: rotate(180deg);
+    margin-bottom: .3rem;
+}
+.total {
+    display: flex;
+    margin-bottom: 2rem;
+
+    h2 {
+        font-family: $font-pt;
+        font-weight: 700;
+        color: $brown;
+        font-size: 1.5rem;
+    }
+}
+.moms {
+    font-family: $font-work-sans;
+    font-weight: 400;
+    font-size: .8rem;
+    color: $brown;
+}
+.price {
+    font-family: $font-pt;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: $brown;
+    margin-top: .2rem;
+    margin-left: 2.2rem;
+}
+.total-button {
+    position: absolute;
+    bottom: 8rem;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+}

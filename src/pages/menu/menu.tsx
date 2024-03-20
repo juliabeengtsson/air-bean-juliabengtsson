@@ -6,7 +6,9 @@ import HeaderTop from '../../assets/header-top.png';
 import HeaderBottom from '../../assets/header-bottom.png';
 import NavButton from '../../assets/svg/nav.svg';
 import Add from '../../assets/svg/add.svg';
-import Cart from '../../assets/svg/cart.svg';
+import CartIcon from '../../assets/svg/cart.svg';
+import useStore from '../../store/store';
+import Cart from '../../components/cart/Cart';
 
 interface Menu {
     id: string,
@@ -35,6 +37,17 @@ const Menu = () => {
         getData();
 
     }, [])
+
+    const { addToCart, showCart, setShowCart } = useStore((state) => ({ 
+
+        addToCart: state.addToCart, // Här referar vi till addToCart som vi skapade i Zustand-store, och möjligheten att manipulera dess state. 
+        showCart: state.showCart, // Showcart har ju false, vet vi ju. Detta deklarerade vi nästan först i Zustand-storen. 
+        setShowCart: state.setShowCart, // setShowCart är uppdateringsfunktionen för vår cart.
+
+    }));
+
+    //console.log(addToCart(menuItems), 'hej')
+
  
     return(
         <main className="menu-container">
@@ -45,10 +58,14 @@ const Menu = () => {
             <section className="nav-button-menu">
                 <img src={NavButton} alt="Nav button menu" onClick={handleClick}/>
             </section>
-            <section>
-                <img src={Cart} alt="cart button" className="cart-button" />
-                <div className="quantity-cart">{count}</div>
+            <section onClick={() => setShowCart(!showCart)}>
+                <img src={CartIcon} alt="cart button" className="cart-button" />
+                <div className="quantity-cart" >{count}</div>
             </section>
+
+            {showCart && (
+                <Cart />
+            )}
 
             <h1>Meny</h1>
 
@@ -56,8 +73,7 @@ const Menu = () => {
                 {menuItems.map(menuItem => (
                     <div key={menuItem.id} className="menu">
                         <div>
-                            <img src={Add} alt="add button" className="add-button"
-                            onClick={() => setCount((count) => count + 1)}
+                            <img src={Add} alt="add button" className="add-button" onClick={() => [addToCart(menuItem), setCount( count + 1 )]}
                             />
                         </div>
                         <div className="menu-title-desc">
